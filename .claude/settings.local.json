@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version)",
+      "Bash(mvn -version)",
+      "Bash(winget --version)",
+      "Bash(choco --version)",
+      "Bash(scoop --version)",
+      "Bash(winget search *)",
+      "Bash(winget install *)",
+      "Read(//c/Program Files/Eclipse Adoptium/jdk-17.0.19.10-hotspot/bin/**)",
+      "Bash(\"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.19.10-hotspot\\\\bin\\\\java\" -version)",
+      "Bash(curl -L -o __TRACKED_VAR__/Downloads/apache-maven-3.9.9-bin.zip https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip)",
+      "Bash(export JAVA_HOME=\"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.19.10-hotspot\")",
+      "Bash(export PATH=\"$JAVA_HOME/bin:$PATH\")"
+    ]
+  }
+}
