@@ -142,7 +142,7 @@ erDiagram
 **请求示例：**
 ```json
 POST /api/auth/login
-{ "username": "admin", "password": "admin123" }
+{ "username": "your-username", "password": "your-password" }
 
 → { "code": 200, "data": { "token": "eyJ...", "username": "admin", "role": "ADMIN" } }
 ```

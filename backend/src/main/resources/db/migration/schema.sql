@@ -43,7 +43,4 @@ CREATE TABLE IF NOT EXISTS `task_news_relation` (
     INDEX `idx_tnr_news_id` (`news_id`)
 );
 
--- Insert default admin user (password: admin123, bcrypt encoded)
-INSERT INTO `tb_user` (`username`, `password`, `email`, `role`) VALUES
-('admin', '$2b$10$QUhWapG.DqSqFctNt3sGXe8y6xFg2Pa6Cga52AIEB63JksKGpJzzi', 'admin@taskmanager.com', 'ADMIN'),
-('user', '$2b$10$QUhWapG.DqSqFctNt3sGXe8y6xFg2Pa6Cga52AIEB63JksKGpJzzi', 'user@taskmanager.com', 'USER');
+-- 默认用户通过应用注册接口创建，不再预置
