@@ -23,6 +23,7 @@ application.yml
 
 # Claude Code (internal AI assistant files)
 .claude/
+CLAUDE.md
 .github/java-upgrade/
 
 # Temp files
