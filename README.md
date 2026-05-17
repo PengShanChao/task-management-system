@@ -10,12 +10,12 @@
 |------|------|------|
 | 后端框架 | Spring Boot | 3.4.5 |
 | ORM | MyBatis-Plus | 3.5.5 |
-| 安全 | Spring Security + JWT (jjwt) | 0.12.x |
+| 安全 | Spring Security + JWT (jjwt) | 0.12.6 |
 | 数据库 | MySQL (prod) / H2 (dev) | 8.0.37 / 2.3.232 |
-| 前端框架 | Vue 3 (Composition API) | 3.5.x |
-| 构建工具 | Vite | 6.x |
-| UI 库 | Element Plus | 2.x |
-| 图表 | ECharts | 5.x |
+| 前端框架 | Vue 3 (Composition API) | 3.5.13 |
+| 构建工具 | Vite | 6.3.5 |
+| UI 库 | Element Plus | 2.10.2 |
+| 图表 | ECharts | 5.6.0 |
 
 ---
 
