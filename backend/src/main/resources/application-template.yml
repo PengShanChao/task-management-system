@@ -34,17 +34,17 @@ mybatis-plus:
 
 app:
   jwt:
-    secret: dGhpc0lzQVZlcnlTZWN1cmVKd3RTZWNyZXRLZXlGb3JUYXNrTWFuYWdlbWVudFN5c3RlbQ==
+    secret: your-jwt-secret-here
     expiration: 86400000
 
 ---
 spring.config.activate.on-profile: prod
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/taskdb?sslMode=DISABLED&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/taskdb?sslMode=DISABLED&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
+    username: your-db-username
+    password: your-db-password
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
@@ -57,5 +57,5 @@ mybatis-plus:
 
 app:
   jwt:
-    secret: dGhpc0lzQVZlcnlTZWN1cmVKd3RTZWNyZXRLZXlGb3JUYXNrTWFuYWdlbWVudFN5c3RlbQ==
+    secret: your-jwt-secret-here
     expiration: 86400000

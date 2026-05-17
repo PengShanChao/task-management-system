@@ -226,6 +226,11 @@ public class NewsServiceImpl implements NewsService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<String> getSources() {
+        return newsMapper.selectDistinctSources();
+    }
+
     private Set<String> extractKeywords(String title) {
         Set<String> keywords = new LinkedHashSet<>();
         if (!StringUtils.hasText(title)) return keywords;

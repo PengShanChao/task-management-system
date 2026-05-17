@@ -72,7 +72,7 @@ const pageSize = ref(10)
 const sources = ref([])
 const lastRefreshed = ref('')
 
-onMounted(() => fetchNews())
+onMounted(() => { fetchNews(); fetchSources() })
 
 async function fetchNews() {
   loading.value = true
@@ -83,15 +83,19 @@ async function fetchNews() {
     const res = await newsApi.list(params)
     newsList.value = res.data.records || []
     total.value = res.data.total || 0
-    // Collect unique sources for filter dropdown
-    const srcSet = new Set(sources.value)
-    newsList.value.forEach(n => { if (n.source) srcSet.add(n.source) })
     if (res.data.total > 0 && newsList.value.length > 0 && newsList.value[0].createdAt) {
       lastRefreshed.value = new Date(newsList.value[0].createdAt).toLocaleString()
     }
   } finally {
     loading.value = false
   }
+}
+
+async function fetchSources() {
+  try {
+    const res = await newsApi.sources()
+    sources.value = res.data || []
+  } catch { /* ignore */ }
 }
 
 async function handleRefresh() {
@@ -107,7 +111,7 @@ async function handleRefresh() {
     page.value = 1
     keyword.value = ''
     sourceFilter.value = ''
-    await fetchNews()
+    await Promise.all([fetchNews(), fetchSources()])
   } catch {
     // handled by interceptor
   } finally {

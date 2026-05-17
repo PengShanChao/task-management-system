@@ -19,3 +19,11 @@ Thumbs.db
 # Environment
 .env
 .env.local
+application.yml
+
+# Claude Code (internal AI assistant files)
+.claude/
+.github/java-upgrade/
+
+# Temp files
+qc

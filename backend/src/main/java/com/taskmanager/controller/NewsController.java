@@ -43,4 +43,9 @@ public class NewsController {
     public Result<List<NewsResponse>> getRelatedNews() {
         return Result.success(newsService.getRelatedToUser());
     }
+
+    @GetMapping("/sources")
+    public Result<List<String>> getSources() {
+        return Result.success(newsService.getSources());
+    }
 }

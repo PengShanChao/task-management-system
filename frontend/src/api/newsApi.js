@@ -21,5 +21,8 @@ export const newsApi = {
   },
   unlinkTask(taskId, newsId) {
     return axios.delete(`/api/tasks/${taskId}/news/${newsId}`)
+  },
+  sources() {
+    return axios.get('/api/news/sources')
   }
 }

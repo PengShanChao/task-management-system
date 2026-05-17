@@ -18,4 +18,6 @@ public interface NewsService {
     void unlinkTaskFromNews(Long taskId, Long newsId);
 
     List<NewsResponse> getRelatedToUser();
+
+    List<String> getSources();
 }

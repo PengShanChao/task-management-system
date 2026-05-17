@@ -13,7 +13,7 @@ AI-assisted full-stack task management system for intern-mentor daily task colla
 
 | Layer    | Technology                          |
 |----------|-------------------------------------|
-| Backend  | Java 17 (Eclipse Temurin 17.0.19), Spring Boot 3.4.x, MyBatis-Plus 3.5.x, MySQL 8.x (prod) / H2 (dev), JWT (jjwt 0.12.x) |
+| Backend  | Java 17 (Eclipse Temurin 17.0.19), Spring Boot 3.4.5, MyBatis-Plus 3.5.x, MySQL 8.0.37 (prod) / H2 (dev), JWT (jjwt 0.12.x) |
 | Frontend | Vue 3.5.x (Composition API), Vite 6.x, Element Plus 2.x, Axios 1.x, ECharts 5.x, Pinia 2.x |
 | Build    | Maven 3.9.x (backend), npm (frontend) |
 
